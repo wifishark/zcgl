@@ -13,7 +13,7 @@ class UserProfile(AbstractUser):
     bg_telephone = models.CharField(max_length=12, verbose_name='办公电话', blank=True)
     mobile = models.CharField(max_length=11, verbose_name='手机号码', blank=True)
     is_superuser = models.IntegerField(verbose_name='是否超级管理员', default=0)
-    is_staff = models.CharField(max_length=1, choices=(('1', '是'), ('0', '否')),verbose_name='是否在职', default='1', blank=True)
+    is_staff = models.CharField(max_length=10, choices=(('1', '是'), ('0', '否')),verbose_name='是否在职', default='1', blank=True)
     modify_time = models.DateTimeField(default=datetime.now, verbose_name='修改时间')
 
     class Meta:
